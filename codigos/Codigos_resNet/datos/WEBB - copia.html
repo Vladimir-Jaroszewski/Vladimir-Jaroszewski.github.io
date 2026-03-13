@@ -21,44 +21,10 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="WEBB - copia_files/libs/clipboard/clipboard.min.js"></script>
+<script src="WEBB - copia_files/libs/clipboard/clipboard.min.js"></script>
 <script src="WEBB - copia_files/libs/quarto-html/quarto.js"></script>
 <script src="WEBB - copia_files/libs/quarto-html/popper.min.js"></script>
 <script src="WEBB - copia_files/libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,9 +35,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="WEBB - copia_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="WEBB - copia_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -135,7 +98,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">We/03/yyyy</p>
+        <p class="date">Th/03/yyyy</p>
       </div>
     </div>
     
@@ -171,13 +134,22 @@ window.Quarto = {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>A lo largo de todo el mundo los Bancos Centrales cuentan con posiciones en divisas entrangeras como parte de su activo. Esto lo hacen por distintas circuntacias y algunas de ellas pueden corresponder a las especificidades de cada pais. Habitualmente los bancos centrales pueden utilizar sus posiciones en divisas extrangeras para participar del mercado de cambios (<em>¿son habitualmente los mercados de cambios completamente libres a lo largo del mundo?</em>), de esta manera el banco central puede tener una cierta influencia en el Tipo de Cambio de la divisa entrangera(habitualmente es el Dolar) debido a que es un actor con un gran volumen de dolares para intervenir en el mercado cambiario.</p>
+<p>Cuales pueden ser las motivaciones de un banco central para intervenir en los mercados cambiarios?:</p>
 <ul>
-<li>Todo el análisis anterior parte de considerar las reservas brutas del BCRA, tal como figuran en su balance.</li>
-<li>Sin embargo, suele cuestionarse el uso de esta magnitud a la hora de calcular un tipo de cambio de equilibrio, porque esos fondos no estarían completamente disponibles para funcionar de reserva de los pasivos del BCRA.</li>
-<li>No existen publicaciones oficiales que muestren esta magnitud, en la mayoría de los casos son consultoras las que los publican.</li>
+<li>Acumulacion de reservas como respaldo al circulante monetario que emite (la reservas son un factor de creacion de la base moneteria)</li>
+<li>Influencia en el Tipo de cambio nominal (y sus concecuencias en el pass-thrue y el tipo de cambio real de la economia).</li>
+<li>Actuar por cuenta y orden del tesoro nacion yhal frente a los acuerdos en divisas convertibles con organismos internacionales.</li>
 </ul>
-<p><strong>¿Por qué calculamos las reservas netas?</strong></p>
-<p>Cuando observamos los pasivos del BCRA, notamos que muchos de ellos son obligaciones a corto plazo, que se corresponden a una gran proporción del total de reservas. \ <span class="math inline">\(\implies\)</span> Cuántas&nbsp; reservas&nbsp; tenemos&nbsp; realmente?</p>
+<p>De estas motivaciones puede notarse que por un lado los bancos centrales que los bancos centrales en ocaciones actuan tanto como compradores y vendedores de divisas en el mismo momento. Por lo cual para el funcionamiento de cualquier banco central es necesaria la acumulacion de un cierto nivel de divisas extrangeras.</p>
+<p><strong>¿Cual es es nivel de divisas que deberia poseer un banco central?</strong></p>
+<ul>
+<li>Este nivel como se mide?</li>
+<li>Que mide el tipo de cambio en una economia y cual es la correspondecia con el nivel de reservas?</li>
+</ul>
+<p><em>¿Por qué calculamos las reservas netas?</em></p>
+<p>Cuando observamos los pasivos del BCRA, notamos que muchos de ellos son obligaciones a corto plazo, que se corresponden a una gran proporción del total de reservas.</p>
+<p><span class="math inline">\(\implies\)</span> Cuántas reservas tenemos realmente?</p>
 <p>Para definir las reservas netas es necesario discriminar entre aquellos activos externos que el banco central tiene en su pocecion y no posee una obligación de corto plazo contra ellas.</p>
 <p><strong>Calculo de Reservas Netas</strong></p>
 <p>Existen distintas consideraciones que se pueden encontrar entre los consultores que calculan las reservas Netas; ya que el objetivo de las reservas netas es conocer cual es la capacidad que tiene el BCRA con reservas propias de hacer frente a las distintas contingencias.</p>
@@ -321,311 +293,6 @@ RN_t = RB_t - Encajes_t  - DeudaMult_{t, \le 1a} - BOPREAL_{t, \le 1a} - Swap_t
 <p><a href="https://www.bcra.gob.ar/balances-y-agregados-monetarios/">Balance BCRA</a></p>
 <p><a href="https://www.argentina.gob.ar/noticias/argentina-anuncia-un-programa-de-facilidades-extendidas-con-el-fondo-monetario">acuerdo Fondo</a></p>
 <p><a href="https://chequeado.com/el-explicador/acuerdo-con-el-fmi-que-implica-el-nuevo-endeudamiento-que-negocia-el-gobierno-de-javier-milei/">Noticia Chequeado, acuerdo fondo</a></p>
-<div id="1dacb0b6" class="cell" data-execution_count="1">
-<details class="code-fold">
-<summary>Mostrar código</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co">#Vamos cargar la data al codigo, tenemos gran parte en este excel.</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>archivo <span class="op">=</span> <span class="st">"deuda multilaterales.xlsx"</span> </span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>deuda_multi <span class="op">=</span> pd.read_excel(archivo, sheet_name<span class="op">=</span><span class="st">"deuMult"</span>)</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>encajes <span class="op">=</span> pd.read_excel(archivo, sheet_name<span class="op">=</span><span class="st">"dep y encajes"</span>)</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>bop_1 <span class="op">=</span> pd.read_excel(archivo, sheet_name<span class="op">=</span><span class="st">"bopreal_1"</span>)</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>bop_2 <span class="op">=</span> pd.read_excel(archivo, sheet_name<span class="op">=</span><span class="st">"bopreal_2"</span>)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>bop_3 <span class="op">=</span> pd.read_excel(archivo, sheet_name<span class="op">=</span><span class="st">"bopreal_3"</span>)</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>bop_4 <span class="op">=</span> pd.read_excel(archivo, sheet_name<span class="op">=</span><span class="st">"bopreal_4"</span>)</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co">#Vamos a trabajar con periodos mensuales, por lo cual configuramos la fecha de esta forma</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>bop_2[<span class="st">'fecha'</span>] <span class="op">=</span> pd.to_datetime(bop_2[<span class="st">'fecha'</span>])</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>bop_2[<span class="st">'fecha'</span>] <span class="op">=</span> bop_2[<span class="st">'fecha'</span>].dt.to_period(<span class="st">'M'</span>)</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>bop_1[<span class="st">'fecha'</span>] <span class="op">=</span> pd.to_datetime(bop_1[<span class="st">'fecha'</span>])</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>bop_1[<span class="st">'fecha'</span>] <span class="op">=</span> bop_1[<span class="st">'fecha'</span>].dt.to_period(<span class="st">'M'</span>)</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>bop_3[<span class="st">'fecha'</span>] <span class="op">=</span> pd.to_datetime(bop_3[<span class="st">'fecha'</span>])</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>bop_3[<span class="st">'fecha'</span>] <span class="op">=</span> bop_3[<span class="st">'fecha'</span>].dt.to_period(<span class="st">'M'</span>)</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>bop_4[<span class="st">'fecha'</span>] <span class="op">=</span> pd.to_datetime(bop_4[<span class="st">'fecha'</span>])</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>bop_4[<span class="st">'fecha'</span>] <span class="op">=</span> bop_4[<span class="st">'fecha'</span>].dt.to_period(<span class="st">'M'</span>)</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="co">#Hacemos el merge de las columnas que nos interesan en base a la columna fecha</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>bop <span class="op">=</span> (</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    bop_1</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    .merge(bop_2, on<span class="op">=</span><span class="st">'fecha'</span>, how<span class="op">=</span><span class="st">'outer'</span>)</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    .merge(bop_3, on<span class="op">=</span><span class="st">'fecha'</span>, how<span class="op">=</span><span class="st">'outer'</span>)</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    .merge(bop_4, on<span class="op">=</span><span class="st">'fecha'</span>, how<span class="op">=</span><span class="st">'outer'</span>)</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Poner fecha como índice</span></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>bop <span class="op">=</span> bop.set_index(<span class="st">'fecha'</span>)</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear rango completo mensual, ya que que los flujos de fondos del bopreal pueden saltear meses</span></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>rango_completo <span class="op">=</span> pd.period_range(</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    start<span class="op">=</span>bop.index.<span class="bu">min</span>(),</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    end<span class="op">=</span>bop.index.<span class="bu">max</span>(),</span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>    freq<span class="op">=</span><span class="st">'M'</span></span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Reindexar (esto agrega los meses faltantes con NaN)</span></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>bop <span class="op">=</span> bop.reindex(rango_completo)</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="co"># Suma de los vencimientos de los Bopreal a 1 año vistas</span></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>bop[<span class="st">'Bopreal'</span>] <span class="op">=</span> bop.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>bop[<span class="st">'bop_año'</span>] <span class="op">=</span> (</span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>    bop[<span class="st">'Bopreal'</span>][::<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>    .rolling(<span class="dv">12</span>)</span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">sum</span>()[::<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Trabajamos con las Deudas con los Org. Multilaterales</span></span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>deuda_multi.index<span class="op">=</span>deuda_multi[<span class="st">'fecha'</span>]</span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>deuda_multi[<span class="st">'suma un año'</span>]<span class="op">=</span> (</span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>    deuda_multi[<span class="st">"vencimiento"</span>][::<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>    .rolling(<span class="st">"365D"</span>)</span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">sum</span>()[::<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>)<span class="op">/</span><span class="dv">1000</span></span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>deuda_multi <span class="op">=</span> deuda_multi.drop(columns<span class="op">=</span>[<span class="st">'fecha'</span>,<span class="st">'vencimiento'</span>])</span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>deuda_multi<span class="op">=</span>deuda_multi.rename(columns<span class="op">=</span>{<span class="st">'suma un año'</span>:<span class="st">'deuda_mult'</span>})</span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="co">#Trabajamos con los encajes</span></span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>encajes.index<span class="op">=</span>encajes[<span class="st">'fecha'</span>]</span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>encajes<span class="op">=</span>encajes.drop(columns<span class="op">=</span>[<span class="st">'fecha'</span>])</span>
-<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>encajes[<span class="st">'dep_Nac_ext'</span>]<span class="op">=</span>encajes[<span class="st">'dep_Nac_ext'</span>]<span class="op">/</span><span class="dv">1000</span></span>
-<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>encajes[<span class="st">'encajes_ext'</span>]<span class="op">=</span>encajes[<span class="st">'encajes_ext'</span>]<span class="op">/</span><span class="dv">1000</span></span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="co">#Vamos con el Swap con China</span></span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="co">#tc del Yuan</span></span>
-<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>tc_yuan_excel<span class="op">=</span> <span class="st">"tc_yuan.xlsx"</span></span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>tc_yuan <span class="op">=</span> pd.read_excel(tc_yuan_excel)</span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalizar fechas a inicio de mes para hacer el merge</span></span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>tc_yuan[<span class="st">'Fecha'</span>] <span class="op">=</span> pd.to_datetime(tc_yuan[<span class="st">'Fecha'</span>], <span class="bu">format</span><span class="op">=</span><span class="st">'</span><span class="sc">%d</span><span class="st">.%m.%Y'</span>)</span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>tc_yuan[<span class="st">'fecha'</span>] <span class="op">=</span> tc_yuan[<span class="st">'Fecha'</span>].dt.to_period(<span class="st">'M'</span>).dt.to_timestamp()</span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>tc_yuan[<span class="st">'Último'</span>]<span class="op">=</span>tc_yuan[<span class="st">'Último'</span>]<span class="op">/</span><span class="dv">10000</span></span>
-<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a><span class="co"># Tomar el último valor disponible por mes</span></span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>tc_yuan_mensual <span class="op">=</span> tc_yuan.sort_values(<span class="st">'Fecha'</span>).groupby(<span class="st">'fecha'</span>)[<span class="st">'Último'</span>].last().reset_index()</span>
-<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>swap_china <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fecha'</span>: pd.date_range(start<span class="op">=</span><span class="st">'2020-01-01'</span>, periods<span class="op">=</span><span class="dv">75</span>, freq<span class="op">=</span><span class="st">'MS'</span>),</span>
-<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>    <span class="st">'yuanes'</span>: <span class="dv">130_000_000</span></span>
-<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge con swap_china</span></span>
-<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>swap_china <span class="op">=</span> swap_china.merge(tc_yuan_mensual, on<span class="op">=</span><span class="st">'fecha'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
-<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcular monto en usd</span></span>
-<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>swap_china[<span class="st">'swap_usd'</span>] <span class="op">=</span> swap_china[<span class="st">'yuanes'</span>] <span class="op">/</span> swap_china[<span class="st">'Último'</span>]</span>
-<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>swap_china[<span class="st">'swap_usd'</span>]<span class="op">=</span>swap_china[<span class="st">'swap_usd'</span>]<span class="op">/</span><span class="dv">1000</span></span>
-<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>swap_china <span class="op">=</span> swap_china.set_index(<span class="st">'fecha'</span>)</span>
-<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a><span class="co">#trabajamos con las Reservas Brutas</span></span>
-<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a>reservas_excel<span class="op">=</span><span class="st">"reservas.xlsx"</span></span>
-<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>reservas <span class="op">=</span> pd.read_excel(reservas_excel)</span>
-<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>reservas[<span class="st">'fecha'</span>] <span class="op">=</span> pd.to_datetime(reservas[<span class="st">'Fecha'</span>])</span>
-<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a>reservas<span class="op">=</span>reservas.set_index(<span class="st">'fecha'</span>)</span>
-<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a><span class="co">#hacemos todos los merge</span></span>
-<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>deuda_multi.merge(encajes[<span class="st">'dep_Nac_ext'</span>], left_index<span class="op">=</span><span class="va">True</span>, right_index<span class="op">=</span><span class="va">True</span>, how<span class="op">=</span><span class="st">"left"</span>)</span>
-<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a>df_c<span class="op">=</span>df.merge(encajes[<span class="st">'otros pasivos_usd'</span>], left_index<span class="op">=</span><span class="va">True</span>, right_index<span class="op">=</span><span class="va">True</span>, how<span class="op">=</span><span class="st">"left"</span>)</span>
-<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>df_b<span class="op">=</span>df_c.merge(reservas[<span class="st">'Reservas mensuales'</span>], left_index<span class="op">=</span><span class="va">True</span>, right_index<span class="op">=</span><span class="va">True</span>, how<span class="op">=</span><span class="st">"left"</span>)</span>
-<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>df_a<span class="op">=</span>df_b.merge(swap_china[<span class="st">'swap_usd'</span>], left_index<span class="op">=</span><span class="va">True</span>, right_index<span class="op">=</span><span class="va">True</span>, how<span class="op">=</span><span class="st">"left"</span>)</span>
-<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>df_1<span class="op">=</span>df_a.merge(encajes[<span class="st">'encajes_ext'</span>], left_index<span class="op">=</span><span class="va">True</span>, right_index<span class="op">=</span><span class="va">True</span>, how<span class="op">=</span><span class="st">"left"</span>)</span>
-<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>df_1<span class="op">=</span>df_1[<span class="st">'2020-01-01'</span>:<span class="st">'2026-01-01'</span>]</span>
-<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>df_1.index <span class="op">=</span> pd.to_datetime(df_1.index)</span>
-<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>df_1.index <span class="op">=</span> df_1.index.to_period(<span class="st">'M'</span>)</span>
-<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>df_1<span class="op">=</span>df_1.merge(bop[<span class="st">'bop_año'</span>], left_index<span class="op">=</span><span class="va">True</span>, right_index<span class="op">=</span><span class="va">True</span>, how<span class="op">=</span><span class="st">"left"</span>)</span>
-<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>df_1[<span class="st">'otros pasivos_usd'</span>]<span class="op">=</span>df_1[<span class="st">'otros pasivos_usd'</span>]<span class="op">-</span>df_1[<span class="st">'swap_usd'</span>]</span>
-<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>df_1<span class="op">=</span>df_1[[<span class="st">'Reservas mensuales'</span>, <span class="st">'encajes_ext'</span>, <span class="st">'swap_usd'</span>,<span class="st">'bop_año'</span>,<span class="st">'dep_Nac_ext'</span>,<span class="st">'otros pasivos_usd'</span>,<span class="st">'deuda_mult'</span>]]</span>
-<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>df_1<span class="op">=</span>df_1.fillna(<span class="dv">0</span>)</span>
-<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>df_1[<span class="st">'Res_net'</span>]<span class="op">=</span>df_1[<span class="st">'Reservas mensuales'</span>]<span class="op">-</span>df_1[<span class="st">'encajes_ext'</span>]<span class="op">-</span>df_1[<span class="st">'swap_usd'</span>]<span class="op">-</span>df_1[<span class="st">'bop_año'</span>]<span class="op">-</span>df_1[<span class="st">'dep_Nac_ext'</span>]<span class="op">-</span>df_1[<span class="st">'otros pasivos_usd'</span>]</span>
-<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>df_1[<span class="st">'Res_Super_net'</span>]<span class="op">=</span>df_1[<span class="st">'Reservas mensuales'</span>]<span class="op">-</span>df_1[<span class="st">'encajes_ext'</span>]<span class="op">-</span>df_1[<span class="st">'swap_usd'</span>]<span class="op">-</span>df_1[<span class="st">'bop_año'</span>]<span class="op">-</span>df_1[<span class="st">'dep_Nac_ext'</span>]<span class="op">-</span>df_1[<span class="st">'otros pasivos_usd'</span>]<span class="op">-</span>df_1[<span class="st">'deuda_mult'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="24a655cb" class="cell" data-execution_count="2">
-<details class="code-fold">
-<summary>Mostrar código</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert index to datetime</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plot_index <span class="op">=</span> df_1.index.to_timestamp()</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>color_net <span class="op">=</span> <span class="st">"#1f4e79"</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>color_super <span class="op">=</span> <span class="st">"#a61c1c"</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure()</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Scatter(</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>plot_index,</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>df_1[<span class="st">'Res_net'</span>],</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    mode<span class="op">=</span><span class="st">'lines'</span>,</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">'Reservas Netas'</span>,</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>color_net, width<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Scatter(</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>plot_index,</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>df_1[<span class="st">'Res_Super_net'</span>],</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    mode<span class="op">=</span><span class="st">'lines'</span>,</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">'Reservas Super Netas'</span>,</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>color_super, width<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Línea cero</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>fig.add_hline(</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="dv">0</span>,</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    line_dash<span class="op">=</span><span class="st">"dash"</span>,</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    line_color<span class="op">=</span><span class="st">"black"</span>,</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    opacity<span class="op">=</span><span class="fl">0.6</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Últimos valores</span></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>fig.add_annotation(</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>plot_index[<span class="op">-</span><span class="dv">1</span>],</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>df_1[<span class="st">'Res_net'</span>].iloc[<span class="op">-</span><span class="dv">1</span>],</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    text<span class="op">=</span><span class="ss">f"</span><span class="sc">{</span>df_1[<span class="st">'Res_net'</span>]<span class="sc">.</span>iloc[<span class="op">-</span><span class="dv">1</span>]<span class="sc">:,.0f}</span><span class="ss">"</span>,</span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    showarrow<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    font<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>color_net, size<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>fig.add_annotation(</span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>plot_index[<span class="op">-</span><span class="dv">1</span>],</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>df_1[<span class="st">'Res_Super_net'</span>].iloc[<span class="op">-</span><span class="dv">1</span>],</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>    text<span class="op">=</span><span class="ss">f"</span><span class="sc">{</span>df_1[<span class="st">'Res_Super_net'</span>]<span class="sc">.</span>iloc[<span class="op">-</span><span class="dv">1</span>]<span class="sc">:,.0f}</span><span class="ss">"</span>,</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>    showarrow<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>    font<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>color_super, size<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>fig.update_layout(</span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="bu">dict</span>(</span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>        text<span class="op">=</span><span class="st">"Reservas Internacionales del BCRA"</span>,</span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span><span class="dv">0</span>,</span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>        font<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">18</span>)</span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>    yaxis_title<span class="op">=</span><span class="st">"Millones de USD"</span>,</span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>    template<span class="op">=</span><span class="st">"simple_white"</span>,</span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>    legend<span class="op">=</span><span class="bu">dict</span>(</span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>        orientation<span class="op">=</span><span class="st">"h"</span>,</span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span><span class="fl">1.05</span>,</span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span><span class="dv">0</span></span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>    yaxis<span class="op">=</span><span class="bu">dict</span>(</span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>        tickformat<span class="op">=</span><span class="st">","</span>,</span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>        showgrid<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>        gridcolor<span class="op">=</span><span class="st">"rgba(0,0,0,0.1)"</span></span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>    xaxis<span class="op">=</span><span class="bu">dict</span>(</span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>        showgrid<span class="op">=</span><span class="va">False</span></span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>    margin<span class="op">=</span><span class="bu">dict</span>(l<span class="op">=</span><span class="dv">40</span>, r<span class="op">=</span><span class="dv">20</span>, t<span class="op">=</span><span class="dv">60</span>, b<span class="op">=</span><span class="dv">40</span>)</span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-        <script>
-        window.PlotlyConfig = {MathJaxConfig: 'local'};
-        if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
-        </script>
-        <script type="module">import "https://cdn.plot.ly/plotly-3.4.0.min"</script>
-        
-</div>
-<div class="cell-output cell-output-display">
-<div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
-        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.4.0.min.js" integrity="sha256-KEmPoupLpFyGMyGAiOsiNDbKDKAvxXAn/W+oQa0ZAfk=" crossorigin="anonymous"></script>                <div id="323248bb-69aa-40d1-b7a8-216251974321" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("323248bb-69aa-40d1-b7a8-216251974321")) {                    Plotly.newPlot(                        "323248bb-69aa-40d1-b7a8-216251974321",                        [{"line":{"color":"#1f4e79","width":3},"mode":"lines","name":"Reservas Netas","x":["2020-01-01T00:00:00.000000","2020-02-01T00:00:00.000000","2020-03-01T00:00:00.000000","2020-04-01T00:00:00.000000","2020-05-01T00:00:00.000000","2020-06-01T00:00:00.000000","2020-07-01T00:00:00.000000","2020-08-01T00:00:00.000000","2020-09-01T00:00:00.000000","2020-10-01T00:00:00.000000","2020-11-01T00:00:00.000000","2020-12-01T00:00:00.000000","2021-01-01T00:00:00.000000","2021-02-01T00:00:00.000000","2021-03-01T00:00:00.000000","2021-04-01T00:00:00.000000","2021-05-01T00:00:00.000000","2021-06-01T00:00:00.000000","2021-07-01T00:00:00.000000","2021-08-01T00:00:00.000000","2021-09-01T00:00:00.000000","2021-10-01T00:00:00.000000","2021-11-01T00:00:00.000000","2021-12-01T00:00:00.000000","2022-01-01T00:00:00.000000","2022-02-01T00:00:00.000000","2022-03-01T00:00:00.000000","2022-04-01T00:00:00.000000","2022-05-01T00:00:00.000000","2022-06-01T00:00:00.000000","2022-07-01T00:00:00.000000","2022-08-01T00:00:00.000000","2022-09-01T00:00:00.000000","2022-10-01T00:00:00.000000","2022-11-01T00:00:00.000000","2022-12-01T00:00:00.000000","2023-01-01T00:00:00.000000","2023-02-01T00:00:00.000000","2023-03-01T00:00:00.000000","2023-04-01T00:00:00.000000","2023-05-01T00:00:00.000000","2023-06-01T00:00:00.000000","2023-07-01T00:00:00.000000","2023-08-01T00:00:00.000000","2023-09-01T00:00:00.000000","2023-10-01T00:00:00.000000","2023-11-01T00:00:00.000000","2023-12-01T00:00:00.000000","2024-01-01T00:00:00.000000","2024-02-01T00:00:00.000000","2024-03-01T00:00:00.000000","2024-04-01T00:00:00.000000","2024-05-01T00:00:00.000000","2024-06-01T00:00:00.000000","2024-07-01T00:00:00.000000","2024-08-01T00:00:00.000000","2024-09-01T00:00:00.000000","2024-10-01T00:00:00.000000","2024-11-01T00:00:00.000000","2024-12-01T00:00:00.000000","2025-01-01T00:00:00.000000","2025-02-01T00:00:00.000000","2025-03-01T00:00:00.000000","2025-04-01T00:00:00.000000","2025-05-01T00:00:00.000000","2025-06-01T00:00:00.000000","2025-07-01T00:00:00.000000","2025-08-01T00:00:00.000000","2025-09-01T00:00:00.000000","2025-10-01T00:00:00.000000","2025-11-01T00:00:00.000000","2025-12-01T00:00:00.000000","2026-01-01T00:00:00.000000"],"y":{"dtype":"f8","bdata":"\u002fA4cotXFx0CMQiN8OrHGQI9bZDmDYcZAlx0PyvETxUDxewTooPHCQIkOtwHwMsRAmLZlDBamw0Ada0TAfITAQJp5lsQKYbhAuMSwjDhIs0BoDggqb9WsQO9aI+gtFbBAfBavYA7LrUBk5OP4iyCsQMRkW2VKhLFAmM12f1UjtkDuvT2LVcq8QELbh3\u002f6s71Awv3WMsmAu0B7f2yY7ZfEQNT71lAZf7pAkKxemdZDuUCYMlrzF5CyQLr87+jKpqJAwDs8jfeBW8CwuX5u32VnwICkRZq7SVnAAIFNXfcKYMCIHCAQPkamQMiNqhpVQ6tASCPk6EzKkECgoju8+kVjQMrrhiJUdK9AvOvTvdWboUA4Kukeij+XQOB1f3UgH7JAHBahFdg+rUBU2Z2AbACjQBDuPUTK7XZAEMGR43GjcEBsqvgHNKiDwJmgeK8kULLAxuoNxmcNwsAY8fSJP\u002f++wA27TgKANsDA4OYPvDytwsAetpJkDSTDwJVN3IYL5L7AHVlhxj0rv8Aw7BVjKuG6wOKiVsl5ALLACaHV+JIGrcB+NAnBKfOcwHWcIIzIGaPATbKgVWBzusA66hV8J823wL4TAVrbzL3AUBUOGgTBvcA9t\u002fDh+abAwMfvwUrATMXAsxWIUMt1xcBETJNaJavDwDEat\u002fdC88fASxI\u002fsys3y8A21TTXPRmcwG42cbHTwqXAYrmaVrBppMAwk60rHEd9wODRvzcpJZHAin5+SuP6kMBZDvODuvGhwPWiHSJdsa7As5an21YrscA="},"type":"scatter"},{"line":{"color":"#a61c1c","width":3},"mode":"lines","name":"Reservas Super Netas","x":["2020-01-01T00:00:00.000000","2020-02-01T00:00:00.000000","2020-03-01T00:00:00.000000","2020-04-01T00:00:00.000000","2020-05-01T00:00:00.000000","2020-06-01T00:00:00.000000","2020-07-01T00:00:00.000000","2020-08-01T00:00:00.000000","2020-09-01T00:00:00.000000","2020-10-01T00:00:00.000000","2020-11-01T00:00:00.000000","2020-12-01T00:00:00.000000","2021-01-01T00:00:00.000000","2021-02-01T00:00:00.000000","2021-03-01T00:00:00.000000","2021-04-01T00:00:00.000000","2021-05-01T00:00:00.000000","2021-06-01T00:00:00.000000","2021-07-01T00:00:00.000000","2021-08-01T00:00:00.000000","2021-09-01T00:00:00.000000","2021-10-01T00:00:00.000000","2021-11-01T00:00:00.000000","2021-12-01T00:00:00.000000","2022-01-01T00:00:00.000000","2022-02-01T00:00:00.000000","2022-03-01T00:00:00.000000","2022-04-01T00:00:00.000000","2022-05-01T00:00:00.000000","2022-06-01T00:00:00.000000","2022-07-01T00:00:00.000000","2022-08-01T00:00:00.000000","2022-09-01T00:00:00.000000","2022-10-01T00:00:00.000000","2022-11-01T00:00:00.000000","2022-12-01T00:00:00.000000","2023-01-01T00:00:00.000000","2023-02-01T00:00:00.000000","2023-03-01T00:00:00.000000","2023-04-01T00:00:00.000000","2023-05-01T00:00:00.000000","2023-06-01T00:00:00.000000","2023-07-01T00:00:00.000000","2023-08-01T00:00:00.000000","2023-09-01T00:00:00.000000","2023-10-01T00:00:00.000000","2023-11-01T00:00:00.000000","2023-12-01T00:00:00.000000","2024-01-01T00:00:00.000000","2024-02-01T00:00:00.000000","2024-03-01T00:00:00.000000","2024-04-01T00:00:00.000000","2024-05-01T00:00:00.000000","2024-06-01T00:00:00.000000","2024-07-01T00:00:00.000000","2024-08-01T00:00:00.000000","2024-09-01T00:00:00.000000","2024-10-01T00:00:00.000000","2024-11-01T00:00:00.000000","2024-12-01T00:00:00.000000","2025-01-01T00:00:00.000000","2025-02-01T00:00:00.000000","2025-03-01T00:00:00.000000","2025-04-01T00:00:00.000000","2025-05-01T00:00:00.000000","2025-06-01T00:00:00.000000","2025-07-01T00:00:00.000000","2025-08-01T00:00:00.000000","2025-09-01T00:00:00.000000","2025-10-01T00:00:00.000000","2025-11-01T00:00:00.000000","2025-12-01T00:00:00.000000","2026-01-01T00:00:00.000000"],"y":{"dtype":"f8","bdata":"ZHhpuTMrv0A9n\u002fJJ+we9QJfUIJ6UtrxARjL0n4c9ukDP087bYwu2QPDb5zpjArlA8iO+aeQNuEBE+n7EbbyxQIcMPfQusKJA+AyV3ReAicA0SUOUQdufwNxO4DajxJjAKr0THkZNrcCEpm03lkKywBAhWL5b\u002f63ATMsiHChPtcDAlUESY3KxwHrrL3PTlbDAwnmlHRXQvcDejy3exh64wI6hvgiPT8PAmOc+WjSrxcAQpmDNr3LOwOvELLcGYNHAplOovH6z1MBBlb3KzKjWwAJBENB+7dbA8ZqYbMj+1sDGmpnQMBPWwP8ZeEE93tXAhs\u002f4txYk2MA8S\u002fjCYJzZwIVWYwcBJNbAmh4lspUv1sCGlZvUyOrWwOmq3ZbiM9TAYpbWuDdI08CItupCifHTwH\u002fF5wlHGdbAT5TLOm+k08CwZ2Klq+DTwEtLfsfiFNjAYmGx3\u002fvu2cCIMskN7rzWwFbd\u002fBWDVdfAtvEVAsTC18DNyM4k+nfVwD3iR7ZP99PAcXiqM4Yq08Cez656VivQwDLZxY\u002f518vASKjIircgysDEo6\u002foDrTCwBTM9v2Be8PAmRdS9xbuy8CCUw5Ynl\u002fJwGF3yeDwYMzApMxu5WOJzMCwGwkt6WzOwMTZk5yfl9HAeAPMPzur0cBEiSOj4dbQwNkCkcjU9dLACHf0UJGr1MDPR8v0O8jBwGnyrhPoH8TAoDVH9HDEw8D5VL+ZPFm\u002fwD7esDVnz8DAT1rTJ39FwsClQm4tfOjDwBsHP\u002fpessTAbN82AJccxcA="},"type":"scatter"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"shapes":[{"line":{"color":"black","dash":"dash"},"opacity":0.6,"type":"line","x0":0,"x1":1,"xref":"x domain","y0":0,"y1":0,"yref":"y"}],"annotations":[{"font":{"color":"#1f4e79","size":12},"showarrow":false,"text":"-4,395","x":"2026-01-01T00:00:00","y":-4395.339289163868},{"font":{"color":"#a61c1c","size":12},"showarrow":false,"text":"-10,809","x":"2026-01-01T00:00:00","y":-10809.17969404134}],"title":{"font":{"size":18},"text":"Reservas Internacionales del BCRA","x":0},"legend":{"orientation":"h","y":1.05,"x":0},"yaxis":{"title":{"text":"Millones de USD"},"tickformat":",","showgrid":true,"gridcolor":"rgba(0,0,0,0.1)"},"xaxis":{"showgrid":false},"margin":{"l":40,"r":20,"t":60,"b":40}},                        {"responsive": true}                    ).then(function(){
-                            
-var gd = document.getElementById('323248bb-69aa-40d1-b7a8-216251974321');
-var x = new MutationObserver(function (mutations, observer) {{
-        var display = window.getComputedStyle(gd).display;
-        if (!display || display === 'none') {{
-            console.log([gd, 'removed!']);
-            Plotly.purge(gd);
-            observer.disconnect();
-        }}
-}});
-
-// Listen for the removal of the full notebook cells
-var notebookContainer = gd.closest('#notebook-container');
-if (notebookContainer) {{
-    x.observe(notebookContainer, {childList: true});
-}}
-
-// Listen for the clearing of the current output cell
-var outputEl = gd.closest('.output');
-if (outputEl) {{
-    x.observe(outputEl, {childList: true});
-}}
-
-                        })                };            </script>        </div>
-</div>
-</div>
 </section>
 </section>
 
